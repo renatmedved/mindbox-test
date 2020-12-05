@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Handlers", "src\MindboxTest.Handlers\MindboxTest.Handlers.csproj", "{C5634F29-6ECF-4FEC-B82C-FB61433B72F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.DAL", "src\MindboxTest.DAL\MindboxTest.DAL.csproj", "{6E1830C7-CF25-45FB-9026-5AB2BF0F7940}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Figures", "src\MindboxTest.Figures\MindboxTest.Figures.csproj", "{AFFEB44B-DB9A-431C-9AFF-FDAF470CE6D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.API", "src\MindboxTest.API\MindboxTest.API.csproj", "{6F073205-D71A-4449-B067-0951493AFAED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9E1409B7-522A-4739-A505-CE4628145DDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{72E22BA2-556E-4023-9B31-2A9AEF4A77B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5634F29-6ECF-4FEC-B82C-FB61433B72F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5634F29-6ECF-4FEC-B82C-FB61433B72F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5634F29-6ECF-4FEC-B82C-FB61433B72F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5634F29-6ECF-4FEC-B82C-FB61433B72F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E1830C7-CF25-45FB-9026-5AB2BF0F7940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E1830C7-CF25-45FB-9026-5AB2BF0F7940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E1830C7-CF25-45FB-9026-5AB2BF0F7940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E1830C7-CF25-45FB-9026-5AB2BF0F7940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFFEB44B-DB9A-431C-9AFF-FDAF470CE6D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFEB44B-DB9A-431C-9AFF-FDAF470CE6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFEB44B-DB9A-431C-9AFF-FDAF470CE6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFEB44B-DB9A-431C-9AFF-FDAF470CE6D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F073205-D71A-4449-B067-0951493AFAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F073205-D71A-4449-B067-0951493AFAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F073205-D71A-4449-B067-0951493AFAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F073205-D71A-4449-B067-0951493AFAED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5634F29-6ECF-4FEC-B82C-FB61433B72F8} = {9E1409B7-522A-4739-A505-CE4628145DDC}
+		{6E1830C7-CF25-45FB-9026-5AB2BF0F7940} = {9E1409B7-522A-4739-A505-CE4628145DDC}
+		{AFFEB44B-DB9A-431C-9AFF-FDAF470CE6D8} = {9E1409B7-522A-4739-A505-CE4628145DDC}
+		{6F073205-D71A-4449-B067-0951493AFAED} = {9E1409B7-522A-4739-A505-CE4628145DDC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17D70051-ECE7-47B0-9230-AFE1300B5FB5}
+	EndGlobalSection
+EndGlobal
