@@ -9,22 +9,26 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.DAL", "src\Mind
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Figures", "src\MindboxTest.Figures\MindboxTest.Figures.csproj", "{AFFEB44B-DB9A-431C-9AFF-FDAF470CE6D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.API", "src\MindboxTest.API\MindboxTest.API.csproj", "{6F073205-D71A-4449-B067-0951493AFAED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.API", "src\MindboxTest.API\MindboxTest.API.csproj", "{6F073205-D71A-4449-B067-0951493AFAED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9E1409B7-522A-4739-A505-CE4628145DDC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{72E22BA2-556E-4023-9B31-2A9AEF4A77B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.Figures.Tests", "tests\MindboxTest.Figures.Tests\MindboxTest.Figures.Tests.csproj", "{9C7B2398-E933-4860-B481-65C0BA7064DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Figures.Tests", "tests\MindboxTest.Figures.Tests\MindboxTest.Figures.Tests.csproj", "{9C7B2398-E933-4860-B481-65C0BA7064DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7842FC73-FF1B-458D-82CB-2F0877A08589}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.Contracts", "src\MindboxTest.Contracts\MindboxTest.Contracts.csproj", "{0D755A93-E3CB-4901-9ED3-DB46CACE794D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Contracts", "src\MindboxTest.Contracts\MindboxTest.Contracts.csproj", "{0D755A93-E3CB-4901-9ED3-DB46CACE794D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.Contracts.Tests", "tests\MindboxTest.Contracts.Tests\MindboxTest.Contracts.Tests.csproj", "{AFCADDD0-8BB2-4332-A21F-073EDD4DE374}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Contracts.Tests", "tests\MindboxTest.Contracts.Tests\MindboxTest.Contracts.Tests.csproj", "{AFCADDD0-8BB2-4332-A21F-073EDD4DE374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.DAL.Tests", "tests\MindboxTest.DAL.Tests\MindboxTest.DAL.Tests.csproj", "{0AC353FA-298F-41F5-8B6A-3ED159E4FC93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.TestHelpers", "tests\MindboxTest.TestHelpers\MindboxTest.TestHelpers.csproj", "{288068BA-C371-4D35-8D41-5A774818D513}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +64,14 @@ Global
 		{AFCADDD0-8BB2-4332-A21F-073EDD4DE374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFCADDD0-8BB2-4332-A21F-073EDD4DE374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFCADDD0-8BB2-4332-A21F-073EDD4DE374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC353FA-298F-41F5-8B6A-3ED159E4FC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC353FA-298F-41F5-8B6A-3ED159E4FC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC353FA-298F-41F5-8B6A-3ED159E4FC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC353FA-298F-41F5-8B6A-3ED159E4FC93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288068BA-C371-4D35-8D41-5A774818D513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288068BA-C371-4D35-8D41-5A774818D513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288068BA-C371-4D35-8D41-5A774818D513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288068BA-C371-4D35-8D41-5A774818D513}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +84,8 @@ Global
 		{9C7B2398-E933-4860-B481-65C0BA7064DB} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
 		{0D755A93-E3CB-4901-9ED3-DB46CACE794D} = {9E1409B7-522A-4739-A505-CE4628145DDC}
 		{AFCADDD0-8BB2-4332-A21F-073EDD4DE374} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
+		{0AC353FA-298F-41F5-8B6A-3ED159E4FC93} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
+		{288068BA-C371-4D35-8D41-5A774818D513} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {17D70051-ECE7-47B0-9230-AFE1300B5FB5}
