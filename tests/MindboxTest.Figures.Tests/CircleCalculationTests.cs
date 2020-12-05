@@ -1,4 +1,5 @@
 using MindboxTest.Figures.Circle;
+using MindboxTest.TestHelpers;
 using NUnit.Framework;
 using System;
 
@@ -7,7 +8,6 @@ namespace MindboxTest.Figures.Tests
     public class CircleCalculationTests
     {
         private readonly CircleCalculator _calc = new CircleCalculator(new CircleValidator());
-        private readonly double _tolerance = 1.0 / Math.Pow(10, 10);
 
         [Test]
         public void TestThatAreaDividePiDivideRadiusIsRaduis()
@@ -24,7 +24,7 @@ namespace MindboxTest.Figures.Tests
 
                 double actual = result / Math.PI / radius;
 
-                Assert.That(actual, Is.EqualTo(radius).Within(_tolerance));
+                Assert.That(actual, Is.EqualTo(radius).Within(DoubleHelpers.Tolerance));
             }
         }
     }

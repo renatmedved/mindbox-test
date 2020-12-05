@@ -1,4 +1,5 @@
 using MindboxTest.Figures.Triangle;
+using MindboxTest.TestHelpers;
 using NUnit.Framework;
 using System;
 
@@ -7,7 +8,6 @@ namespace MindboxTest.Figures.Tests
     public class TriangleCalculationTests
     {
         private readonly TriangleCalculator _calc = new TriangleCalculator(new TriangleValidator());
-        private readonly double _tolerance = 1.0 / Math.Pow(10, 10);
 
         [Test]
         public void TestThatAreaDivideBaseMultiply2IsHeight()
@@ -25,7 +25,7 @@ namespace MindboxTest.Figures.Tests
 
                 double actual = result / @base * 2.0;
 
-                Assert.That(actual, Is.EqualTo(height).Within(_tolerance));
+                Assert.That(actual, Is.EqualTo(height).Within(DoubleHelpers.Tolerance));
             }
         }
     }
