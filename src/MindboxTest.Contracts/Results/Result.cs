@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System;
 using System.Linq;
 
-namespace MindboxTest.Contracts
+namespace MindboxTest.Contracts.Results
 {
     public sealed class Result<TData>
     {
@@ -43,11 +43,11 @@ namespace MindboxTest.Contracts
                 return _errs;
             }
         }
-        public TData Data 
-        { 
+        public TData Data
+        {
             get
             {
-                if (_errs != null) 
+                if (_errs != null)
                 {
                     throw new InvalidOperationException($"property {nameof(Success)} should be true to read property {nameof(Data)}");
                 }
