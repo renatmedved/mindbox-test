@@ -1,4 +1,4 @@
-﻿using MindboxTest.Contracts;
+﻿using MindboxTest.Contracts.Results;
 
 namespace MindboxTest.Figures.Base
 {

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using MindboxTest.Contracts;
+using MindboxTest.Contracts.Results;
 using System.Collections.Generic;
 using System.Linq;
 
