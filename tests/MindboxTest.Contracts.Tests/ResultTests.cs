@@ -1,3 +1,4 @@
+using MindboxTest.Contracts.Results;
 using NUnit.Framework;
 using System;
 
