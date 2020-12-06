@@ -26,9 +26,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Contracts", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Contracts.Tests", "tests\MindboxTest.Contracts.Tests\MindboxTest.Contracts.Tests.csproj", "{AFCADDD0-8BB2-4332-A21F-073EDD4DE374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.DAL.Tests", "tests\MindboxTest.DAL.Tests\MindboxTest.DAL.Tests.csproj", "{0AC353FA-298F-41F5-8B6A-3ED159E4FC93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.DAL.Tests", "tests\MindboxTest.DAL.Tests\MindboxTest.DAL.Tests.csproj", "{0AC353FA-298F-41F5-8B6A-3ED159E4FC93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.TestHelpers", "tests\MindboxTest.TestHelpers\MindboxTest.TestHelpers.csproj", "{288068BA-C371-4D35-8D41-5A774818D513}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.TestHelpers", "tests\MindboxTest.TestHelpers\MindboxTest.TestHelpers.csproj", "{288068BA-C371-4D35-8D41-5A774818D513}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTest.Infrastructure", "src\MindboxTest.Infrastructure\MindboxTest.Infrastructure.csproj", "{43DF5D72-53D8-4D9E-A670-736A20CB3CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindboxTest.Handlers.Tests", "tests\MindboxTest.Handlers.Tests\MindboxTest.Handlers.Tests.csproj", "{4E4A74ED-0E35-4C8D-BBFA-34B73E0D74FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +76,14 @@ Global
 		{288068BA-C371-4D35-8D41-5A774818D513}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{288068BA-C371-4D35-8D41-5A774818D513}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{288068BA-C371-4D35-8D41-5A774818D513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43DF5D72-53D8-4D9E-A670-736A20CB3CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DF5D72-53D8-4D9E-A670-736A20CB3CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43DF5D72-53D8-4D9E-A670-736A20CB3CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43DF5D72-53D8-4D9E-A670-736A20CB3CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4A74ED-0E35-4C8D-BBFA-34B73E0D74FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4A74ED-0E35-4C8D-BBFA-34B73E0D74FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4A74ED-0E35-4C8D-BBFA-34B73E0D74FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4A74ED-0E35-4C8D-BBFA-34B73E0D74FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +98,8 @@ Global
 		{AFCADDD0-8BB2-4332-A21F-073EDD4DE374} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
 		{0AC353FA-298F-41F5-8B6A-3ED159E4FC93} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
 		{288068BA-C371-4D35-8D41-5A774818D513} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
+		{43DF5D72-53D8-4D9E-A670-736A20CB3CB2} = {9E1409B7-522A-4739-A505-CE4628145DDC}
+		{4E4A74ED-0E35-4C8D-BBFA-34B73E0D74FC} = {72E22BA2-556E-4023-9B31-2A9AEF4A77B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {17D70051-ECE7-47B0-9230-AFE1300B5FB5}
