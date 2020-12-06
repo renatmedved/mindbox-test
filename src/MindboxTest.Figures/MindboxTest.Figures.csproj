@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MindboxTest.Contracts\MindboxTest.Contracts.csproj" />
+    <ProjectReference Include="..\MindboxTest.Infrastructure\MindboxTest.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
