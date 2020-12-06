@@ -21,6 +21,11 @@ namespace MindboxTest.Contracts.Results
             return new Result<TData>(null, data);
         }
 
+        public static Result<TData> MakeFailMessage(string err)
+        {
+            return MakeFail(new[] { err });
+        }
+
         public static Result<TData> MakeFail(IEnumerable<string> errs)
         {
             if (errs == null)
