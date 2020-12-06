@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.3.0" />
     <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="newtonsoft.json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MindboxTest.DAL\MindboxTest.DAL.csproj" />
+    <ProjectReference Include="..\MindboxTest.Figures\MindboxTest.Figures.csproj" />
+    <ProjectReference Include="..\MindboxTest.Infrastructure\MindboxTest.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
