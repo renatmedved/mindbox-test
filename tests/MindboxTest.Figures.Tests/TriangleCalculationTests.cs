@@ -1,13 +1,15 @@
 using MindboxTest.Figures.Triangle;
 using MindboxTest.TestHelpers;
+
 using NUnit.Framework;
+
 using System;
 
 namespace MindboxTest.Figures.Tests
 {
     public class TriangleCalculationTests
     {
-        private readonly TriangleCalculator _calc = new TriangleCalculator(new TriangleValidator());
+        private readonly TriangleCalculator _calc = new TriangleCalculator();
 
         [Test]
         public void TestThatAreaDivideBaseMultiply2IsHeight()
@@ -21,7 +23,7 @@ namespace MindboxTest.Figures.Tests
 
                 var triangleDesc = new TriangleDescription { Base = @base, Height = height };
 
-                double result = _calc.Calculate(triangleDesc).Data;
+                double result = _calc.Calculate(triangleDesc);
 
                 double actual = result / @base * 2.0;
 

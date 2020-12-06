@@ -1,13 +1,15 @@
 using MindboxTest.Figures.Circle;
 using MindboxTest.TestHelpers;
+
 using NUnit.Framework;
+
 using System;
 
 namespace MindboxTest.Figures.Tests
 {
     public class CircleCalculationTests
     {
-        private readonly CircleCalculator _calc = new CircleCalculator(new CircleValidator());
+        private readonly CircleCalculator _calc = new CircleCalculator();
 
         [Test]
         public void TestThatAreaDividePiDivideRadiusIsRaduis()
@@ -20,7 +22,7 @@ namespace MindboxTest.Figures.Tests
 
                 var circleDesc = new CircleDescription { Radius = radius };
 
-                double result = _calc.Calculate(circleDesc).Data;
+                double result = _calc.Calculate(circleDesc);
 
                 double actual = result / Math.PI / radius;
 

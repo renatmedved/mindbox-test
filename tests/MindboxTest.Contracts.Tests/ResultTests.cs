@@ -1,5 +1,7 @@
 using MindboxTest.Contracts.Results;
+
 using NUnit.Framework;
+
 using System;
 
 namespace MindboxTest.Contracts.Tests
