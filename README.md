@@ -4,15 +4,16 @@
 * {type:'circle', description:{radius:88.4}}
 
 В ответ придёт json с полями
+
 * errors - если пусто, значит всё ок
 * data - структура с данными
 
 ## Как добавить новую фигуру:
 
 1. в проекте MindboxTest.Figures, например, в папке {Figure}, добавить классы 
-1.1 {Figure}Description, где задать данные фигуры, отнаследовав от IFigureDescription
-1.2 {Figure}Validator, отнаследовав от AbstractValidator<{Figure}Description>
-1.3 {Figure}Calculator<{Figure}Description>, отнаследовав от IAreaCalculator
+* {Figure}Description, где задать данные фигуры, отнаследовав от IFigureDescription
+* {Figure}Validator, отнаследовав от AbstractValidator<{Figure}Description>
+* {Figure}Calculator<{Figure}Description>, отнаследовав от IAreaCalculator
 2. Добавить в MindboxTest.Figures/Proxy/ProxyFigureInitializator вызов ProxyFigureStorage.AddFigureProcessors по аналогии
 
 ## В процессе:
