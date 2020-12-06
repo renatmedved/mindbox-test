@@ -1,9 +1,8 @@
-﻿using MindboxTest.Contracts.Results;
-
-namespace MindboxTest.Figures.Base
+﻿namespace MindboxTest.Figures.Base
 {
     public interface IAreaCalculator<TFigureDescription>
+        where TFigureDescription : IFigureDescription
     {
-        Result<double> Calculate(TFigureDescription desc);
+        double Calculate(TFigureDescription desc);
     }
 }

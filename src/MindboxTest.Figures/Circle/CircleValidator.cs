@@ -7,7 +7,7 @@ namespace MindboxTest.Figures.Circle
         public CircleValidator()
         {
             RuleFor(x => x).NotNull();
-            RuleFor(x => x.Radius).GreaterThanOrEqualTo(0d);
+            RuleFor(x => x.Radius).GreaterThan(0d);
         }
     }
 }

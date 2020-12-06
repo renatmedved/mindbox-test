@@ -2,13 +2,9 @@
 
 namespace MindboxTest.Figures.Triangle
 {
-    public sealed class TriangleCalculator : ValidatedCalculator<TriangleDescription>
+    public sealed class TriangleCalculator: IAreaCalculator<TriangleDescription>
     {
-        public TriangleCalculator(TriangleValidator validator):base(validator)
-        {
-        }
-
-        protected override double CalculateLogic(TriangleDescription desc)
+        public double Calculate(TriangleDescription desc)
         {
             return 0.5 * desc.Height * desc.Base;
         }

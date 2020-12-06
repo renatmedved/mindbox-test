@@ -1,6 +1,8 @@
-﻿namespace MindboxTest.Figures.Circle
+﻿using MindboxTest.Figures.Base;
+
+namespace MindboxTest.Figures.Circle
 {
-    public sealed class CircleDescription
+    public sealed class CircleDescription : IFigureDescription
     {
         public double Radius { get; set; }
     }

@@ -7,8 +7,8 @@ namespace MindboxTest.Figures.Triangle
         public TriangleValidator()
         {
             RuleFor(x => x).NotNull();
-            RuleFor(x => x.Height).GreaterThanOrEqualTo(0d);
-            RuleFor(x => x.Base).GreaterThanOrEqualTo(0d);
+            RuleFor(x => x.Height).GreaterThan(0d);
+            RuleFor(x => x.Base).GreaterThan(0d);
         }
     }
 }

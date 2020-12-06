@@ -1,15 +1,12 @@
 ﻿using MindboxTest.Figures.Base;
+
 using System;
 
 namespace MindboxTest.Figures.Circle
 {
-    public sealed class CircleCalculator : ValidatedCalculator<CircleDescription>
+    public sealed class CircleCalculator : IAreaCalculator<CircleDescription>
     {
-        public CircleCalculator(CircleValidator validator):base(validator)
-        {
-        }
-
-        protected override double CalculateLogic(CircleDescription desc)
+        public double Calculate(CircleDescription desc)
         {
             return desc.Radius * desc.Radius * Math.PI;
         }

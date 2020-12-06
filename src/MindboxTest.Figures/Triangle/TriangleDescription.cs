@@ -1,6 +1,8 @@
-﻿namespace MindboxTest.Figures.Triangle
+﻿using MindboxTest.Figures.Base;
+
+namespace MindboxTest.Figures.Triangle
 {
-    public sealed class TriangleDescription
+    public sealed class TriangleDescription : IFigureDescription
     {
         public double Height { get; set; }
         public double Base { get; set; }
