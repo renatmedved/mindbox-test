@@ -1,7 +1,6 @@
 ﻿using Dapper;
 
 using MindboxTest.DAL.Connections;
-using MindboxTest.DAL.Dto;
 using MindboxTest.DAL.Tables;
 
 using System.Data.SQLite;
@@ -18,26 +17,17 @@ namespace MindboxTest.DAL.Queries
             _connFactory = connFactory;
         }
 
-        public async Task<long> Execute(FigureWithParamsDto dto)
+        public async Task<long> Execute(Figure figure)
         {
             using SQLiteConnection conn = _connFactory.MakeDbConnection();
             await conn.OpenAsync();
 
             long id = await conn.QuerySingleAsync<long>(
                 @"INSERT INTO Figure
-                ( Type ) VALUES
-                ( @Type );
-                select last_insert_rowid()", dto.Figure);
-
-            foreach(FigureAreaParam param in dto.Params)
-            {
-                param.FigureId = id;
-
-                await conn.QueryAsync(
-                    @"INSERT INTO FigureAreaParam 
-                    ( FigureId, ParameterName, ParameterValue ) VALUES
-                    ( @FigureId, @ParameterName, @ParameterValue )", param);
-            }
+                ( Type, Description ) 
+                VALUES
+                ( @Type, @Description );
+                select last_insert_rowid()", figure);
 
             return id;
         }
