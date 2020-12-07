@@ -33,5 +33,17 @@ namespace MindboxTest.DAL.Tests
             Assert.AreEqual(figureId, retrieved.Id);
             Assert.AreEqual(figure.Description, retrieved.Description);
         }
+
+        [Test]
+        public async Task RetrieveNotExist_NullResult()
+        {
+            var conFactory = new ConnectionFactory("DB/figures.sqlite");
+
+            var retrieveQuery = new RetrieveFigureQuery(conFactory);
+
+            Figure retrieved = await retrieveQuery.Execute(-1);
+
+            Assert.IsNull(retrieved);
+        }
     }
 }
