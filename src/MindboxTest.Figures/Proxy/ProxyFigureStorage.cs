@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using MindboxTest.Contracts.Results;
+
 using MindboxTest.Figures.Base;
 
 using System;
@@ -28,7 +28,16 @@ namespace MindboxTest.Figures.Proxy
             _codeMap.AddOrUpdate(code, type, (key, old)=> type);
         }
 
-        internal Type GetDescriptionType(string type)
+        /// <summary>
+        /// Dangerous: not thread-safe
+        /// </summary>
+        internal static void ClearAllFigureProcessors()
+        {
+            _typeMap.Clear();
+            _codeMap.Clear();
+        }
+
+        internal virtual Type GetDescriptionType(string type)
         {
             if (_codeMap.TryGetValue(type, out Type value))
             {
@@ -38,7 +47,7 @@ namespace MindboxTest.Figures.Proxy
             return null;
         }
 
-        internal ProxyFigureProcessors GetProxyFigureProcessor(IFigureDescription description)
+        internal virtual ProxyFigureProcessors GetProxyFigureProcessor(IFigureDescription description)
         {
             if (_typeMap.TryGetValue(description.GetType(), out ProxyFigureProcessors value))
             {
