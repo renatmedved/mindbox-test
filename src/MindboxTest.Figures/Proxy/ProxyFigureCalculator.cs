@@ -6,10 +6,12 @@ namespace MindboxTest.Figures.Proxy
     public class ProxyFigureCalculator
     {
         private readonly ProxyFigureStorage _storage;
+        private readonly ProxyFigureValidator _validator;
 
-        public ProxyFigureCalculator(ProxyFigureStorage storage)
+        public ProxyFigureCalculator(ProxyFigureStorage storage, ProxyFigureValidator validator)
         {
             _storage = storage;
+            _validator = validator;
         }
 
         public Result<double> Calculate(IFigureDescription request)
@@ -21,7 +23,7 @@ namespace MindboxTest.Figures.Proxy
                 return Result<double>.MakeFailMessage("error figure");
             }
 
-            Result<Empty> validateResult = processor.Validate(request);
+            Result<Empty> validateResult = _validator.Validate(request);
 
             if (validateResult.Fail)
             {

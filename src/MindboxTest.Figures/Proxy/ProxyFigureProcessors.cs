@@ -1,8 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using MindboxTest.Contracts.Results;
+
 using MindboxTest.Figures.Base;
-using MindboxTest.Infrastructure;
 
 using System;
 
@@ -11,24 +10,24 @@ namespace MindboxTest.Figures.Proxy
     internal sealed class ProxyFigureProcessors
     {
         public Func<IFigureDescription, double> Calculate { get; private set; }
-        public Func<IFigureDescription, Result<Empty>> Validate { get; private set; }
+        public Func<IFigureDescription, ValidationResult> Validate { get; private set; }
 
         public void Init<TDescription>(AbstractValidator<TDescription> validator, 
             IAreaCalculator<TDescription> calculator)
             where TDescription : IFigureDescription
         {
-            Calculate = (IFigureDescription desc) => calculator.Calculate((TDescription)desc);
-            Validate = (IFigureDescription desc) =>
+            if (validator == null)
             {
-                ValidationResult result = validator.Validate((TDescription)desc);
+                throw new ArgumentNullException(nameof(validator));
+            }
 
-                if (result.IsValid)
-                {
-                    return Result<Empty>.MakeSucces(Empty.Instance);
-                }
+            if (calculator == null)
+            {
+                throw new ArgumentNullException(nameof(calculator));
+            }
 
-                return Result<Empty>.MakeFail(result.ErrorsToListString());
-            };
+            Calculate = (IFigureDescription desc) => calculator.Calculate((TDescription)desc);
+            Validate = (IFigureDescription desc) => validator.Validate((TDescription)desc);
         }
     }
 }
