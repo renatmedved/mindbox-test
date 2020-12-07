@@ -15,7 +15,7 @@ namespace MindboxTest.Figures.Proxy
             _storage = storage;
         }
 
-        public Result<Empty> Validate(IFigureDescription request)
+        public virtual Result<Empty> Validate(IFigureDescription request)
         {
             ProxyFigureProcessors processor = _storage.GetProxyFigureProcessor(request);
 
