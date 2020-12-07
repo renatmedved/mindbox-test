@@ -18,7 +18,7 @@ namespace MindboxTest.Handlers.AddFigure
         private readonly IQueryFactory _queryFactory;
         private readonly ProxyFigureValidator _validator;
 
-        public AddFigureHandler(IQueryFactory queryFactory, ProxyFigureValidator validator, ProxyFigureDescriptionProvider descriptionProvider)
+        public AddFigureHandler(IQueryFactory queryFactory, ProxyFigureValidator validator)
         {
             _queryFactory = queryFactory;
             _validator = validator;
