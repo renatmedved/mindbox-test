@@ -88,6 +88,15 @@ namespace MindboxTest.Contracts.Tests
         }
 
         [Test]
+        public void MakeFailErrrorMessage_MessageWrote()
+        {
+            var result = Result<object>.MakeFailMessage("msg");
+
+            Assert.AreEqual(result.Errors.Count, 1);
+            Assert.AreEqual(result.Errors[0], "msg");
+        }
+
+        [Test]
         public void MakeFail_FailTrue()
         {
             var result = Result<object>.MakeFail(new[] { "error" });
@@ -96,9 +105,25 @@ namespace MindboxTest.Contracts.Tests
         }
 
         [Test]
+        public void MakeFailErrrorMessage_FailTrue()
+        {
+            var result = Result<object>.MakeFailMessage("msg");
+
+            Assert.AreEqual(result.Fail, true);
+        }
+
+        [Test]
         public void MakeFail_SuccessFalse()
         {
             var result = Result<object>.MakeFail(new[] { "error" });
+
+            Assert.AreEqual(result.Success, false);
+        }
+
+        [Test]
+        public void MakeFailErrrorMessage_SuccessFalse()
+        {
+            var result = Result<object>.MakeFailMessage("msg");
 
             Assert.AreEqual(result.Success, false);
         }
@@ -115,6 +140,14 @@ namespace MindboxTest.Contracts.Tests
         public void MakeFailErrorsEmpty_DataThrow()
         {
             var result = Result<object>.MakeFail(new string[0]);
+
+            Assert.Throws<InvalidOperationException>(() => { var _ = result.Data; });
+        }
+
+        [Test]
+        public void MakeFailErrrorMessage_DataThrow()
+        {
+            var result = Result<object>.MakeFailMessage("msg");
 
             Assert.Throws<InvalidOperationException>(() => { var _ = result.Data; });
         }
