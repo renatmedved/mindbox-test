@@ -1,6 +1,7 @@
 ﻿using MindboxTest.Figures.Circle;
 using MindboxTest.Figures.Proxy;
 using MindboxTest.Figures.Triangle;
+
 using NUnit.Framework;
 
 using System;
