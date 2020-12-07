@@ -15,6 +15,7 @@
 * {Figure}Validator, отнаследовав от AbstractValidator<{Figure}Description>
 * {Figure}Calculator<{Figure}Description>, отнаследовав от IAreaCalculator
 2. Добавить в MindboxTest.Figures/Proxy/ProxyFigureInitializator вызов ProxyFigureStorage.AddFigureProcessors по аналогии
+3. Добавить тест проверки инициализатора в MindboxTest.Figures.Tests/Proxy/ProxyFigureDescriptionProviderTests по аналогии
 
 ## В процессе:
 
