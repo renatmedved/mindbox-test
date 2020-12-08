@@ -4,8 +4,11 @@ using MindboxTest.DAL.Tables;
 using MindboxTest.Figures.Circle;
 using MindboxTest.Figures.Proxy;
 using MindboxTest.Handlers.CalcArea;
+
 using Moq;
+
 using NUnit.Framework;
+
 using System.Threading;
 using System.Threading.Tasks;
 
