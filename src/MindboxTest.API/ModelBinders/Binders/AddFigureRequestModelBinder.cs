@@ -29,6 +29,12 @@ namespace MindboxTest.API.ModelBinders.Binders
         {
             JObject jObject = await ParseJson(bindingContext.HttpContext);
 
+            if (jObject == null || !jObject.ContainsKey("type"))//it should be processed in handler
+            {
+                bindingContext.Result = ModelBindingResult.Success(MakeRequest(null, null));
+                return;
+            }
+
             string type = jObject["type"].Value<string>();
 
             if (String.IsNullOrWhiteSpace(type))//it should be processed in handler
@@ -46,6 +52,13 @@ namespace MindboxTest.API.ModelBinders.Binders
             }
 
             Type descriptionType = descriptionTypeResult.Data;
+
+            if (!jObject.ContainsKey("description"))//it should be processed in handler
+            {
+                bindingContext.Result = ModelBindingResult.Success(MakeRequest(null, null));
+                return;
+            }
+
             string description = jObject["description"].ToString();
 
             IFigureDescription typedDescription = JsonConvert.DeserializeObject(description, descriptionType)
@@ -72,6 +85,11 @@ namespace MindboxTest.API.ModelBinders.Binders
             using StreamReader reader = new StreamReader(context.Request.Body, Encoding.UTF8, true, 1024, true);
             
             string json = await reader.ReadToEndAsync();
+
+            if (String.IsNullOrWhiteSpace(json))
+            {
+                return null;
+            }
 
             JObject jObject = JObject.Parse(json);
 
