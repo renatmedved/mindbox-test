@@ -43,7 +43,8 @@ namespace MindboxTest.Handlers.Tests
         public async Task Handle_HappyPath_SavedToDb()
         {
             var queryFactoryMock = new Mock<IQueryFactory>();
-            queryFactoryMock.Setup(x => x.SaveFigure(It.IsAny<Figure>()))
+            queryFactoryMock
+                .Setup(x => x.SaveFigure(It.IsAny<Figure>()))
                 .Returns(Task.FromResult(1L));
 
             var handler = new AddFigureHandler(queryFactoryMock.Object, _validator);
@@ -65,7 +66,8 @@ namespace MindboxTest.Handlers.Tests
             long id = 1;
 
             var queryFactoryMock = new Mock<IQueryFactory>();
-            queryFactoryMock.Setup(x => x.SaveFigure(It.IsAny<Figure>()))
+            queryFactoryMock
+                .Setup(x => x.SaveFigure(It.IsAny<Figure>()))
                 .Returns(Task.FromResult(id));
 
             var handler = new AddFigureHandler(queryFactoryMock.Object, _validator);
